@@ -1,0 +1,131 @@
+body {
+    background-color: #080b10;
+    color: white;
+}
+
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: #10151c;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #8995a3;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #22d3ee;
+}
+
+.logo {
+    color: #f1f5f9;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-actions input {
+    width: 200px;
+    padding: 10px 14px;
+    background-color: #171e27;
+    border: 1px solid #232d38;
+    border-radius: 7px;
+    color: #f1f5f9;
+    outline: none;
+}
+
+.nav-actions input:focus {
+    border-color: #22d3ee;
+}
+
+.nav-actions button {
+    padding: 10px 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.nav-actions button:hover {
+    background-color: #60a5fa;
+}
+
+.hero {
+    min-height: 500px;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: linear-gradient(
+        135deg,
+        #0b1220,
+        #101827
+    );
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-label {
+    color: #22d3ee;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 15px 0;
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+.hero-description {
+    max-width: 500px;
+    color: #94a3b8;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.hero-button {
+    margin-top: 25px;
+    padding: 12px 24px;
+    background-color: #22d3ee;
+    color: #071018;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.hero-button:hover {
+    background-color: #67e8f9;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
