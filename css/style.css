@@ -150,6 +150,13 @@ nav a:hover {
     border: 1px solid #232d38;
     border-radius: 10px;
     overflow: hidden;
+
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    border-color: #22d3ee;
 }
 
 .game-card img {
