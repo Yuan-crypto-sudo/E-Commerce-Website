@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head><title>Javascript Sample </title>
+
+<script language=javascript>
+
+let employName=[];
+let rate=[];
+let daysworked=[];
+
+function saveCurrentEmployee(){
+  let nameInput = document.frmsample.txtname.value;
+  let rateInput = parseFloat(document.frmsample.intrate.value);
+  let daysInput = parseInt(document.frmsample.intdaysworked.value);
+
+  employName.push(nameInput);
+  rate.push(rateInput);
+  daysworked.push(daysInput);
+
+  document.frmsample.reset();
+  alert("Employee added successfully! Total entries: " + employName.length);
+
+  document.getElementById("employeelabel").textContent =
+    "Employee Name " + (employName.length + 1) + ":" ;
+}
+
+function computeSalaries() {
+  let output = "";
+
+  for (let i = 0; i < employName.length; i++) {
+    let salary = rate[i] * daysworked[i];
+
+    output +=
+      "Employee Name " + (i + 1) + " : " + employName[i] +
+      "<br>Salary : " + salary.toLocaleString() +
+      "<br><br>";
+  }
+
+  document.getElementById("results").innerHTML = output;
+}
+
+</script>
+</head>
+
+<body><center>
+<h1>Employee Salary Records</h1>
+<table width=500 border=1>
+<form name=frmsample>
+<tr><td id="employeelabel">Employee Name 1:</td>
+<td><input type=text name=txtname size=46></td>
+</tr>
+<tr><td>Rate Per Day</td>
+<td><input type=int name=intrate size=46></td>
+</tr>
+<tr><td>Days Worked:<br>
+</td>
+<td><input type=int name=intdaysworked size=46></td>
+</tr>
+<tr><td align=center colspan=2>
+<input type=button value="Compute Salary" onclick="computeSalaries()";>  
+&nbsp&nbsp&nbsp&nbsp
+
+<input type=button value="Save Employee" onclick="saveCurrentEmployee()">
+</td>
+</tr>
+</form>
+</table>
+<div id="results"></div>
+</body>
+</html>
